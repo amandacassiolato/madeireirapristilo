@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.madeireirapristilo.com.br/sitemap.xml
+Sitemap: https://pristilomadeiras.com.br/sitemap.xml
