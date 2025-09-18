@@ -32,3 +32,69 @@ img{max-width:100%;display:block;height:auto}a{color:#0c4a6e;text-decoration:non
   .grid.two{grid-template-columns:1fr}
   .grid.three{grid-template-columns:1fr}
 }
+
+/* Mobile Call Button */
+.mobile-call{
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  text-align: center;
+  padding: .9rem 1rem;
+  border-radius: 999px;
+  background: #10b981; /* emerald */
+  color: #0b1220;
+  font-weight: 800;
+  z-index: 60;
+  box-shadow: 0 8px 22px rgba(0,0,0,.18);
+}
+.mobile-call:hover{ text-decoration: none; filter: brightness(1.05); }
+
+@media (max-width: 780px){
+  .mobile-call{ display:block; }
+  /* Lift WhatsApp FAB so it doesn't overlap the call button */
+  .floating-whatsapp{ bottom: 4.2rem; }
+}
+
+
+/* Typography polish */
+:root{
+  --title: clamp(1.8rem, 2.2vw + 1rem, 2.4rem);
+  --subtitle: clamp(1rem, 0.6vw + 0.9rem, 1.125rem);
+}
+h1,h2,h3 { letter-spacing: .2px; }
+.section-head{ margin-bottom: 1.2rem; }
+.section-head h2{ font-size: var(--title); margin-bottom: .25rem; }
+.section-head p{ font-size: var(--subtitle); color:#55637a; margin-top:.35rem; }
+
+/* Space fix under carousel */
+#produtos{ padding-top: clamp(3rem, 6vw, 5rem); }
+
+/* Product cards with image */
+.product-grid .product{ padding:0; overflow:hidden }
+.product-grid .product img{ display:block; width:100%; height:auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.product-grid .product .p{ padding: 1rem 1.1rem 1.2rem; }
+.product-grid .product h3{ margin:.2rem 0 .25rem; }
+.product-grid .product p{ color:#475569; }
+
+/* Nicer shadows and rounded corners */
+.card{ border-radius:20px; box-shadow: 0 6px 26px rgba(2,6,23,.06); border:1px solid #e5e7eb; }
+
+/* Mobile action bar */
+.mobile-bar{
+  position: fixed; left:0; right:0; bottom:0;
+  display:none; gap:.6rem; padding:.6rem;
+  background: rgba(255,255,255,.9); backdrop-filter: blur(10px);
+  border-top:1px solid #e5e7eb; z-index:70;
+}
+.mobile-bar a{
+  flex:1; text-align:center; padding:.85rem 1rem; border-radius:12px; font-weight:800;
+}
+.mobile-bar .call{ background:#10b981; color:#0b1220; }
+.mobile-bar .wa{ background:#25D366; color:#0b1220; }
+@media (max-width: 780px){
+  .mobile-bar{ display:flex; }
+  .floating-whatsapp{ display:none; } /* hide floating FAB when bottom bar visible */
+  .mobile-call{ display:none; } /* old single button hidden */
+}
