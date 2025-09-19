@@ -1,3 +1,76 @@
+/* Menu mobile: logotipo centralizado, ícone à direita, submenu */
+@media (max-width: 780px) {
+  .mainmenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0.2rem 0;
+    gap: 0;
+  }
+  .brand.center-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    margin: 0 auto;
+  }
+  .main-nav {
+    display: none;
+  }
+  .menu-toggle {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 0.5rem 0 0;
+    margin-left: auto;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 8px 32px rgba(0,0,0,.10);
+    border-radius: 0 0 18px 18px;
+    padding: 1.2rem 0.8rem 1.1rem 0.8rem;
+    flex-direction: column;
+    gap: 1.1rem;
+    align-items: center;
+    z-index: 10;
+    animation: fadeInMenu .25s;
+  }
+  .mobile-menu.open {
+    display: flex;
+  }
+  .mobile-menu a {
+    font-size: 1.13rem;
+    font-weight: 600;
+    color: #0c4a6e;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  .mobile-menu a.btn {
+    background: #0c4a6e;
+    color: #fff;
+    margin-top: 0.5rem;
+    font-size: 1.08rem;
+    padding: 0.7rem 1.1rem;
+  }
+  @keyframes fadeInMenu {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: none; }
+  }
+}
 @media (max-width: 780px) {
   .topbar {
     min-height: 54px;

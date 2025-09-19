@@ -1,3 +1,21 @@
+// Menu mobile: abrir/fechar submenu ao clicar no ícone
+document.addEventListener('DOMContentLoaded', function() {
+  const toggle = document.querySelector('.menu-toggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (toggle && mobileMenu) {
+    toggle.addEventListener('click', function() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+    // Fecha o menu ao clicar em um link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+});
 // Efeito de menu fixo com fundo ao rolar e animação de altura
 window.addEventListener('scroll', function() {
   const topbar = document.querySelector('.topbar');

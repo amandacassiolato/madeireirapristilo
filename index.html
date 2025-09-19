@@ -81,16 +81,23 @@
 </head>
 <body>
   <header class="topbar">
-    <div class="container flex between center mainmenu">
-      <a class="brand" href="#inicio" aria-label="Início">
+    <div class="container mainmenu">
+      <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+        <svg width="32" height="32" viewBox="0 0 32 32"><rect y="7" width="32" height="3" rx="1.5" fill="#0c4a6e"/><rect y="15" width="32" height="3" rx="1.5" fill="#0c4a6e"/><rect y="23" width="32" height="3" rx="1.5" fill="#0c4a6e"/></svg>
+      </button>
+      <a class="brand center-logo" href="#inicio" aria-label="Início">
         <img src="/assets/logo.svg" width="44" height="44" alt="Logo Madeireira Pristilo">
-        <span>Madeireira <strong>Pristilo</strong></span>
       </a>
       <nav aria-label="Menu principal" class="main-nav">
         <a href="#produtos">Produtos</a>
         <a href="#footer" id="sobre-link">Sobre nós</a>
         <a href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." target="_blank" class="btn small">Solicitar Orçamento</a>
       </nav>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#produtos">Produtos</a>
+        <a href="#footer" id="sobre-link-mobile">Sobre nós</a>
+        <a href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." target="_blank" class="btn small">Solicitar Orçamento</a>
+      </div>
     </div>
   </header>
 
