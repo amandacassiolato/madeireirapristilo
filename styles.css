@@ -6,9 +6,11 @@ body::before {
   width: 100vw;
   height: 100vh;
   z-index: -2;
-  background: url('/assets/hero-madeiras-serradas3.png') center center / cover no-repeat fixed;
-  opacity: 0.32;
+  background: url('/assets/hero-madeiras-serradas3.png') center center / cover no-repeat;
+  background-attachment: fixed;
+  opacity: 0.25;
   pointer-events: none;
+  will-change: transform;
 }
 body::after {
   content: "";
@@ -18,8 +20,9 @@ body::after {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background: linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.75) 100%);
+  background: linear-gradient(180deg,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.8) 100%);
   pointer-events: none;
+  will-change: transform;
 }
 /* Menu mobile: logotipo centralizado, ícone à direita, submenu */
 @media (max-width: 780px) {
