@@ -8,18 +8,21 @@
     justify-content: center;
     align-items: center;
     padding: 0.2rem 0 0.2rem 0;
+    gap: 0.7rem;
   }
   .main-nav {
-    gap: 1.1rem;
+    flex-direction: row;
+    gap: 0.7rem;
     font-size: 0.98rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
   }
   .main-nav a.btn {
     margin-left: 0.5rem;
     padding: 0.5rem 0.9rem;
     font-size: 0.97rem;
-  }
-  .main-nav {
-    flex-wrap: wrap;
+    white-space: nowrap;
   }
   .topbar .brand span {
     display: none;
