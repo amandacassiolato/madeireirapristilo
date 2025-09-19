@@ -1,3 +1,12 @@
+// Efeito de menu fixo com fundo ao rolar
+window.addEventListener('scroll', function() {
+  const topbar = document.querySelector('.topbar');
+  if(window.scrollY > 30) {
+    topbar.classList.add('scrolled');
+  } else {
+    topbar.classList.remove('scrolled');
+  }
+});
 document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year'); if (yearEl) yearEl.textContent = new Date().getFullYear();
 
