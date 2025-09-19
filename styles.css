@@ -71,12 +71,66 @@ h1,h2,h3 { letter-spacing: .2px; }
 /* Space fix under carousel */
 #produtos{ padding-top: clamp(3rem, 6vw, 5rem); }
 
-/* Product cards with image */
-.product-grid .product{ padding:0; overflow:hidden }
-.product-grid .product img{ display:block; width:100%; height:auto; aspect-ratio: 3 / 2; object-fit: cover; }
-.product-grid .product .p{ padding: 1rem 1.1rem 1.2rem; }
-.product-grid .product h3{ margin:.2rem 0 .25rem; }
-.product-grid .product p{ color:#475569; }
+
+/* Product cards with image - efeito e texto sobre imagem */
+.product-grid .product {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 6px 26px rgba(2,6,23,.10);
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: cardFadeIn .8s cubic-bezier(.4,1.4,.6,1) forwards;
+}
+.product-grid .product:nth-child(1) { animation-delay: 0.05s; }
+.product-grid .product:nth-child(2) { animation-delay: 0.15s; }
+.product-grid .product:nth-child(3) { animation-delay: 0.25s; }
+.product-grid .product:nth-child(4) { animation-delay: 0.35s; }
+.product-grid .product:nth-child(5) { animation-delay: 0.45s; }
+.product-grid .product:nth-child(6) { animation-delay: 0.55s; }
+
+@keyframes cardFadeIn {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.product-grid .product img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.product-grid .product .p {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(180deg,rgba(0,0,0,.38) 60%,rgba(0,0,0,.68) 100%);
+  padding: 1.2rem 1.1rem 1.2rem;
+  text-align: center;
+  z-index: 2;
+  border-radius: 20px;
+}
+.product-grid .product h3 {
+  margin: .2rem 0 .25rem;
+  font-size: 1.25rem;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+.product-grid .product p {
+  color: #e5e7eb;
+  font-size: 1.05rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
 
 /* Nicer shadows and rounded corners */
 .card{ border-radius:20px; box-shadow: 0 6px 26px rgba(2,6,23,.06); border:1px solid #e5e7eb; }
