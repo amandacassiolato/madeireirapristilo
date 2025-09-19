@@ -1,3 +1,26 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background: url('/assets/hero-madeiras-serradas3.png') center center / cover no-repeat fixed;
+  opacity: 0.32;
+  pointer-events: none;
+}
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background: linear-gradient(180deg,rgba(0,0,0,0.55) 0%,rgba(0,0,0,0.75) 100%);
+  pointer-events: none;
+}
 /* Menu mobile: logotipo centralizado, ícone à direita, submenu */
 @media (max-width: 780px) {
   .mainmenu {
