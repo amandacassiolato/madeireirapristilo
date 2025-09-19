@@ -1,7 +1,7 @@
-// Efeito de menu fixo com fundo ao rolar
+// Efeito de menu fixo com fundo ao rolar e animação de altura
 window.addEventListener('scroll', function() {
   const topbar = document.querySelector('.topbar');
-  if(window.scrollY > 30) {
+  if(window.scrollY > 40) {
     topbar.classList.add('scrolled');
   } else {
     topbar.classList.remove('scrolled');
