@@ -35,8 +35,19 @@ img{max-width:100%;display:block;height:auto}a{color:#0c4a6e;text-decoration:non
   align-items: center;
 }
 .topbar .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
-.mainmenu{padding:0.5rem 0;}
-.main-nav{display:flex;gap:2.2rem;align-items:center;}
+.mainmenu {
+  padding: 0.5rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-nav {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+  justify-content: center;
+}
 .main-nav a{font-weight:600;font-size:1.08rem;transition:color .2s;}
 .main-nav a.btn{margin-left:1.2rem;}
 .main-nav a:not(.btn):hover{color:#0c4a6e;text-decoration:underline;}
