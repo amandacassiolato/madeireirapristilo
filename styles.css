@@ -619,7 +619,7 @@ h1,h2,h3 { letter-spacing: .2px; }
     z-index:2;
   }
   .brand.center-logo img{
-    height:85px !important; width:auto !important; max-height:85px !important;
+    height:100px !important; width:auto !important; max-height:100px !important;
     object-fit:contain;
   }
 }
