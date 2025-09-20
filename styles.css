@@ -1,3 +1,9 @@
+/* === FIXES: background layering & menu visibility (added by ChatGPT) === */
+html, body { background: transparent; }
+body { position: relative; }
+.topbar, main, footer { position: relative; z-index: 2; }
+/* === END FIXES === */
+
 body::before {
   content: "";
   position: fixed;
@@ -5,8 +11,8 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  z-index: -2;
-  background: url('./assets/back3.webp') center center / cover no-repeat;
+  z-index: 0;
+  background: url('/assets/back3.webp') center center / cover no-repeat;
   background-attachment: fixed;
   opacity: 0.45;
   pointer-events: none;
@@ -359,3 +365,16 @@ h1,h2,h3 { letter-spacing: .2px; }
 }
 
 #projetos{ margin-top: clamp(3.5rem, 6vw, 5.5rem); }
+
+
+/* ensure gradient sits above photo, under content */
+body::after { z-index: 1; }
+
+/* mobile menu visibility defaults */
+.mobile-menu { display: none; }
+
+@media (max-width: 780px){
+  .main-nav { display: none !important; }
+  .mobile-menu { display: none; }
+  .mobile-menu.open { display: flex; }
+}
