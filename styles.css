@@ -554,16 +554,18 @@ h1,h2,h3 { letter-spacing: .2px; }
 
 #projetos{ margin-top: clamp(3.5rem, 6vw, 5.5rem); }
 
-/* --- Barra do menu mais fina, mantendo logo grande --- */
-.topbar {
-  min-height: 38px !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-}
-.topbar .mainmenu, .mainmenu {
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
-  min-height: 38px !important;
+/* --- Barra do menu mais fina, mantendo logo grande (apenas desktop) --- */
+@media (min-width: 781px) {
+  .topbar {
+    min-height: 38px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .topbar .mainmenu, .mainmenu {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 38px !important;
+  }
 }
 
 /* Carrossel: textos grandes, alinhados à esquerda, mas centralizados verticalmente e dentro da imagem */
@@ -580,32 +582,50 @@ h1,h2,h3 { letter-spacing: .2px; }
   text-align: left !important;
   padding: 0;
 }
-.hero-carousel .overlay > * {
-  margin-left: 8vw;
-  margin-right: auto;
-  max-width: 600px;
-}
-.hero-carousel h1, .hero-carousel h2 {
-  font-size: clamp(2.1rem, 4vw + 1rem, 3.2rem) !important;
-  line-height: 1.12;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
-}
-.hero-carousel p {
-  font-size: clamp(1.1rem, 1.5vw + 0.7rem, 1.5rem) !important;
-  margin-bottom: 1.1rem;
-  color: #f3e9e0;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
-}
-.hero-carousel .cta-row {
-  justify-content: flex-start !important;
-}
-@media (max-width: 900px) {
-  .hero-carousel .overlay > * {
-    margin-left: 4vw;
-    max-width: 95vw;
+@media (max-width: 780px) {
+  .mainmenu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 60px;
+    background: transparent;
+    padding: 0;
+    gap: 0;
   }
-  .hero-carousel h1, .hero-carousel h2 {
-    font-size: 1.5rem !important;
+  .brand.center-logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    margin: 0 auto;
+    max-width: 120px;
+    max-height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .brand.center-logo img {
+    max-width: 110px;
+    max-height: 54px;
+    width: auto;
+  }
+  .menu-toggle {
+    display: flex !important;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+    background: none;
+    border: none;
+    padding: 0.2rem 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-nav {
+    display: none !important;
   }
 }
