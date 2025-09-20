@@ -636,7 +636,11 @@ h1,h2,h3 { letter-spacing: .2px; }
   box-shadow: 0 2px 16px rgba(0,0,0,.07);
 }
 body{ padding-top:0 !important; }
-.hero-carousel{ margin-top:110px !important; }
+
+/* Desktop only - abaixar carrossel */
+@media (min-width: 781px) {
+  .hero-carousel{ margin-top:110px !important; }
+}
 
 /* Redução do header ao rolar mantendo apenas o visual */
 .topbar.scrolled{
