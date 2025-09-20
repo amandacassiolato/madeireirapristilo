@@ -1,3 +1,42 @@
+/* Base: menu mobile começa escondido em qualquer largura */
+.mobile-menu { display: none; }
+/* Topbar “glassy” e hover sublinhado elegante */
+.topbar{
+  backdrop-filter: saturate(150%) blur(8px);
+  background: color-mix(in oklab, white 70%, transparent);
+  border-bottom: 1px solid rgba(15,23,42,.06);
+}
+.main-nav a{
+  position: relative;
+  text-decoration: none;
+}
+.main-nav a:not(.btn)::after{
+  content:"";
+  position:absolute; left:0; right:0; bottom:-4px; height:2px;
+  background:#0c4a6e; transform:scaleX(0); transform-origin:left;
+  transition:transform .25s ease;
+}
+.main-nav a:not(.btn):hover::after{ transform:scaleX(1); }
+
+/* Botão do menu (hamburger) com área maior de toque */
+.menu-toggle{ border-radius:12px; padding:.35rem; }
+
+/* Mobile menu com “sheet” mais caprichado */
+@media (max-width:780px){
+  .mobile-menu{
+    background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px);
+    border: 1px solid #e5e7eb;
+  }
+  .mobile-menu a{
+    border: 1px solid transparent;
+    transition: background .2s, border-color .2s, transform .08s;
+  }
+  .mobile-menu a:hover{
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+  }
+}
 /* Menu mobile: logotipo centralizado, ícone à direita, submenu */
 @media (max-width: 780px) {
   .mainmenu {
