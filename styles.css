@@ -639,11 +639,21 @@ body{ padding-top:0 !important; }
 
 /* Desktop only - abaixar carrossel */
 @media (min-width: 781px) {
-  .hero-carousel{ margin-top:110px !important; }
+  .hero-carousel{
+    margin-top:110px !important;
+    display: block !important;
+  }
 }
 
 /* Redução do header ao rolar mantendo apenas o visual */
 .topbar.scrolled{
   background: color-mix(in oklab, white 92%, transparent);
   box-shadow: 0 2px 16px rgba(0,0,0,.10);
+}
+
+/* FORÇA DESKTOP: abaixar carrossel - regra final */
+@media screen and (min-width: 781px) {
+  .hero-carousel {
+    margin-top: 110px !important;
+  }
 }
