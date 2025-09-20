@@ -1,3 +1,17 @@
+/* Cor marrom para o menu principal */
+.main-nav a, .main-nav a:visited, .main-nav a:not(.btn), .main-nav a:not(.btn):hover, .main-nav a:not(.btn):active {
+  color: #7c4a1e !important;
+}
+.main-nav a.btn {
+  background: #7c4a1e;
+  color: #fff !important;
+  border-color: #7c4a1e;
+}
+.main-nav a.btn.outline {
+  background: #fff;
+  color: #7c4a1e !important;
+  border-color: #7c4a1e;
+}
 /* Base: menu mobile começa escondido em qualquer largura */
 .mobile-menu { display: none; }
 /* Topbar “glassy” e hover sublinhado elegante */
