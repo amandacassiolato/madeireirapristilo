@@ -643,15 +643,39 @@ body{ padding-top:0 !important; }
   box-shadow: 0 2px 16px rgba(0,0,0,.10);
 }
 
-/* FORÇAR ALTURA MENOR DO HEADER - DESKTOP */
-@media (min-width: 781px) {
-  .topbar {
-    min-height: 40px !important;
-    max-height: 40px !important;
-  }
-  .topbar .mainmenu, .mainmenu {
-    padding: 0.2rem 0 !important;
-    min-height: 40px !important;
-    max-height: 40px !important;
-  }
+/* === OVERRIDES FINAIS — PATCH DEFINITIVO === */
+
+/* 1) Defina uma variável com a altura do header desktop */
+:root { --headerH: 76px; }            /* ajuste à vontade: 64–88px */
+
+/* 2) Header translúcido padronizado e SEM variações conflitantes */
+.topbar{
+  position: sticky !important;
+  top: 0; left: 0; right: 0;
+  min-height: var(--headerH) !important;
+  display: flex; align-items: center;
+  backdrop-filter: saturate(150%) blur(8px) !important;
+  background: color-mix(in oklab, white 62%, transparent) !important; /* menos branco */
+  border-bottom: 1px solid rgba(15,23,42,.06) !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,.07) !important;
+}
+
+/* 3) Zere qualquer compensação antiga no body */
+body{ padding-top: 0 !important; }
+
+/* 4) Faça o carrossel começar mais abaixo do header */
+.hero-carousel{ margin-top: calc(var(--headerH) + 12px) !important; }
+/* se quiser ainda mais espaço: + 24px, etc. */
+
+/* 5) Menu mais estreito no centro (desktop) */
+@media (min-width: 781px){
+  .mainmenu{ width: auto !important; max-width: 960px !important; margin: 0 auto !important; }
+  .main-nav{ gap: 1.4rem !important; }
+}
+
+/* 6) Mobile continua com altura menor */
+@media (max-width: 780px){
+  :root { --headerH: 56px; }
+  .topbar{ min-height: var(--headerH) !important; background: color-mix(in oklab, white 88%, transparent) !important; }
+  .hero-carousel{ margin-top: calc(var(--headerH)) !important; }
 }
