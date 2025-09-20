@@ -349,6 +349,7 @@ body {
   align-items: flex-start;
   text-align: left;
   padding: 0;
+  color: #fff;
 }
 
 .hero-carousel .overlay > * {
@@ -361,6 +362,7 @@ body {
   font-size: clamp(2.1rem, 4vw + 1rem, 3.2rem);
   line-height: 1.12;
   margin-bottom: 0.5rem;
+  color: #fff;
   text-shadow: 0 2px 16px rgba(0,0,0,.18);
 }
 
@@ -429,6 +431,7 @@ body {
     font-size: 1.18rem !important;
     line-height: 1.18;
     margin-bottom: 0.35rem;
+    color: #fff !important;
     text-shadow: 0 2px 10px rgba(0,0,0,0.18);
   }
 
