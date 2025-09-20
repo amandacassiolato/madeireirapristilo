@@ -609,3 +609,34 @@ h1,h2,h3 { letter-spacing: .2px; }
   .hero-carousel h1, .hero-carousel h2 {
     font-size: 1.5rem !important;
   }
+
+
+/* ==== FIXES LOGO MOBILE ==== */
+@media (max-width:780px){
+  .brand.center-logo{
+    position:absolute; left:50%; top:50%;
+    transform:translate(-50%,-50%);
+    z-index:2;
+  }
+  .brand.center-logo img{
+    height:36px !important; width:auto !important; max-height:36px !important;
+    object-fit:contain;
+  }
+}
+
+/* ==== HEADER STICKY SEM SOBREPOSIÇÃO ==== */
+.topbar{
+  position: sticky !important; top:0;
+  align-items:center;
+  min-height:72px;
+  background: color-mix(in oklab, white 85%, transparent);
+  box-shadow: 0 2px 16px rgba(0,0,0,.07);
+}
+body{ padding-top:0 !important; }
+.hero-carousel{ margin-top:0 !important; }
+
+/* Redução do header ao rolar mantendo apenas o visual */
+.topbar.scrolled{
+  background: color-mix(in oklab, white 92%, transparent);
+  box-shadow: 0 2px 16px rgba(0,0,0,.10);
+}
