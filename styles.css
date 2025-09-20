@@ -392,3 +392,38 @@ h1,h2,h3 { letter-spacing: .2px; }
   padding-bottom: 0 !important;
   min-height: 18px !important;
 }
+
+/* Carrossel: textos grandes e alinhados à esquerda */
+.hero-carousel .overlay {
+  display: flex !important;
+  flex-direction: column;
+  align-items: flex-start !important;
+  justify-content: center;
+  text-align: left !important;
+  padding-left: 5vw !important;
+  padding-right: 20vw !important;
+  max-width: 900px;
+  min-height: 100%;
+}
+.hero-carousel h1, .hero-carousel h2 {
+  font-size: clamp(2.5rem, 5vw + 1rem, 4.2rem) !important;
+  line-height: 1.08;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+.hero-carousel p {
+  font-size: clamp(1.25rem, 2vw + 0.7rem, 2.1rem) !important;
+  margin-bottom: 1.2rem;
+  color: #f3e9e0;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+.hero-carousel .cta-row {
+  justify-content: flex-start !important;
+}
+@media (max-width: 900px) {
+  .hero-carousel .overlay {
+    padding-left: 2vw !important;
+    padding-right: 2vw !important;
+    max-width: 100%;
+  }
+}
