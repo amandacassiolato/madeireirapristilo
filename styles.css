@@ -269,7 +269,9 @@ img{max-width:100%;display:block;height:auto}a{color:#0c4a6e;text-decoration:non
 .topbar .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
 .mainmenu {
   padding: 0.6rem 0;
-  width: 100%;
+  width: auto;
+  max-width: 960px;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -278,7 +280,7 @@ img{max-width:100%;display:block;height:auto}a{color:#0c4a6e;text-decoration:non
 }
 .main-nav {
   display: flex;
-  gap: 2.2rem;
+  gap: 1.4rem;
   align-items: center;
   justify-content: center;
 }
@@ -629,11 +631,12 @@ h1,h2,h3 { letter-spacing: .2px; }
   position: sticky !important; top:0;
   align-items:center;
   min-height:72px;
-  background: color-mix(in oklab, white 85%, transparent);
+  background: color-mix(in oklab, white 60%, transparent);
+  backdrop-filter: blur(6px);
   box-shadow: 0 2px 16px rgba(0,0,0,.07);
 }
 body{ padding-top:0 !important; }
-.hero-carousel{ margin-top:0 !important; }
+.hero-carousel{ margin-top:110px !important; }
 
 /* Redução do header ao rolar mantendo apenas o visual */
 .topbar.scrolled{
