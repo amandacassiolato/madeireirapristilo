@@ -634,7 +634,14 @@ body{ padding-top: 0 !important; }
 
 /* 4) Hambúrguer claro e lógico no mobile */
 @media (max-width:780px){
-  .menu-toggle{ display:flex !important; }
+  .menu-toggle{
+    display:flex !important;
+    position: absolute !important;
+    right: 1.2rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 10 !important;
+  }
   .main-nav{ display:none !important; }   /* esconde o menu desktop */
   /* o .mobile-menu começa escondido (JS vai abrir/fechar) */
   .mobile-menu{ display:none; }
