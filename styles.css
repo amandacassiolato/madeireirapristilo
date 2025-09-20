@@ -164,8 +164,8 @@
     padding-top: 0 !important;
     padding-bottom: 0 !important;
     background: color-mix(in oklab, white 90%, transparent);
-    border-bottom: 1px solid #e5e7eb;
-    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+    border-bottom: none !important;
+    box-shadow: none !important;
     display: flex;
     align-items: center;
   }
