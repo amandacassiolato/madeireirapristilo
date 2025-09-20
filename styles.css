@@ -665,12 +665,21 @@ body{ padding-top: 0 !important; }
 /* 5) Desktop: logo maior e menu otimizado */
 @media (min-width:781px){
   .mainmenu{ max-width: 960px !important; margin: 0 auto !important; }
-  .topbar .brand img{
-    height: 192px !important;
-    width: auto !important;
-    max-height: 192px !important;
+  .topbar{
+    min-height: 80px !important;
+    max-height: 80px !important;
+    overflow: visible !important;
   }
   .topbar .brand{
+    position: relative;
+    z-index: 10;
     font-size: 1.1rem;
+  }
+  .topbar .brand img{
+    height: 120px !important;
+    width: auto !important;
+    max-height: 120px !important;
+    margin-top: -20px;
+    margin-bottom: -20px;
   }
 }
