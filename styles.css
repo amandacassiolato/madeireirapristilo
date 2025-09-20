@@ -67,7 +67,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding: 0.45rem 0 0.45rem 0;
+    padding: 1.1rem 0 1.1rem 0;
     gap: 0;
     min-height: 64px;
     background: transparent;
@@ -83,6 +83,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    top: 8px;
   }
   .brand.center-logo img {
     max-width: 110px;
@@ -98,8 +99,7 @@
     display: flex !important;
     position: absolute;
     right: 1.2rem;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 16px;
     z-index: 3;
     background: none;
     border: none;
@@ -132,19 +132,28 @@
   .mobile-menu a {
     font-size: 1.13rem;
     font-weight: 600;
-    color: #0c4a6e;
+    color: #7c4a1e !important;
     text-decoration: none;
     padding: 0.5rem 0;
     border-radius: 8px;
     width: 100%;
     text-align: center;
+    background: none;
+    border: none;
+    transition: background .2s, border-color .2s, color .2s;
+  }
+  .mobile-menu a:hover {
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+    color: #633816 !important;
   }
   .mobile-menu a.btn {
-    background: #0c4a6e;
-    color: #fff;
+    background: #7c4a1e !important;
+    color: #fff !important;
     margin-top: 0.5rem;
     font-size: 1.08rem;
     padding: 0.7rem 1.1rem;
+    border: none;
   }
   @keyframes fadeInMenu {
     from { opacity: 0; transform: translateY(-10px); }
@@ -328,13 +337,15 @@ body{padding-top:92px;}
     margin-bottom: 0.2rem;
   }
   .mainmenu {
-    min-height: 74px !important;
-    padding: 0.5rem 0 0.5rem 0 !important;
+    min-height: 48px !important;
+    padding: 0.12rem 0 0.12rem 0 !important;
   }
   .topbar {
-    min-height: 74px !important;
+    min-height: 48px !important;
     padding-top: 0 !important;
     padding-bottom: 0 !important;
+    box-shadow: none;
+    background: color-mix(in oklab, white 92%, transparent);
   }
   .brand.center-logo {
     max-width: 120px;
