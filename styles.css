@@ -313,7 +313,7 @@ body {
 .hero-carousel {
   position: relative;
   overflow: hidden;
-  margin-top: calc(var(--headerH-desktop) + 12px);
+  margin-top: var(--headerH-desktop);
 }
 
 .hero-carousel .slides {
@@ -402,7 +402,7 @@ body {
 
 @media (max-width: 780px) {
   .hero-carousel {
-    margin-top: calc(var(--headerH-mobile)) !important;
+    margin-top: var(--headerH-mobile) !important;
   }
 
   .hero-carousel .slides {
