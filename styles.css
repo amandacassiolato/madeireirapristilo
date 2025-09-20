@@ -268,7 +268,7 @@ img{max-width:100%;display:block;height:auto}a{color:#0c4a6e;text-decoration:non
 }
 .topbar .brand{display:flex;align-items:center;gap:.6rem;font-weight:700}
 .mainmenu {
-  padding: 0.6rem 0;
+  padding: 0.3rem 0;
   width: auto;
   max-width: 960px;
   margin: 0 auto;
@@ -630,30 +630,15 @@ h1,h2,h3 { letter-spacing: .2px; }
 .topbar{
   position: sticky !important; top:0;
   align-items:center;
-  min-height:72px;
+  min-height:52px;
   background: color-mix(in oklab, white 60%, transparent);
   backdrop-filter: blur(6px);
   box-shadow: 0 2px 16px rgba(0,0,0,.07);
 }
 body{ padding-top:0 !important; }
 
-/* Desktop only - abaixar carrossel */
-@media (min-width: 781px) {
-  .hero-carousel{
-    margin-top:110px !important;
-    display: block !important;
-  }
-}
-
 /* Redução do header ao rolar mantendo apenas o visual */
 .topbar.scrolled{
   background: color-mix(in oklab, white 92%, transparent);
   box-shadow: 0 2px 16px rgba(0,0,0,.10);
-}
-
-/* FORÇA DESKTOP: abaixar carrossel - regra final */
-@media screen and (min-width: 781px) {
-  .hero-carousel {
-    margin-top: 110px !important;
-  }
 }
