@@ -666,9 +666,9 @@ body{ padding-top: 0 !important; }
 @media (min-width:781px){
   .mainmenu{ max-width: 960px !important; margin: 0 auto !important; }
   .topbar .brand img{
-    height: 48px !important;
+    height: 192px !important;
     width: auto !important;
-    max-height: 48px !important;
+    max-height: 192px !important;
   }
   .topbar .brand{
     font-size: 1.1rem;
