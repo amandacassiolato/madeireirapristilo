@@ -535,6 +535,13 @@ h1,h2,h3 { letter-spacing: .2px; }
   opacity: 0;
   transform: translateY(40px) scale(0.98);
   animation: cardFadeIn .8s cubic-bezier(.4,1.4,.6,1) forwards;
+  transition: transform .3s ease, box-shadow .3s ease;
+  cursor: pointer;
+}
+
+.product-grid .product:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 40px rgba(2,6,23,.15);
 }
 .product-grid .product:nth-child(1) { animation-delay: 0.05s; }
 .product-grid .product:nth-child(2) { animation-delay: 0.15s; }
@@ -574,6 +581,11 @@ h1,h2,h3 { letter-spacing: .2px; }
   z-index: 2;
   border-radius: 0 0 20px 20px;
   min-height: 38%;
+  transition: background .3s ease;
+}
+
+.product-grid .product:hover .p {
+  background: linear-gradient(180deg,rgba(0,0,0,.45) 60%,rgba(0,0,0,.75) 100%);
 }
 .product-grid .product h3 {
   margin: .2rem 0 .25rem;
