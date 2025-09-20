@@ -300,7 +300,20 @@
   <script defer src="/script.js"></script>
   <div class="mobile-bar"><a class="call" href="tel:+551836428182" aria-label="Ligar agora para (18) 3642-8182">Ligar agora</a><a class="wa" href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." aria-label="Falar no WhatsApp">WhatsApp</a></div>
 
-
+  <script>
+    // Toggle simples do menu mobile
+    (function () {
+      const btn = document.querySelector('.menu-toggle');
+      const sheet = document.getElementById('mobileMenu');
+      if(!btn || !sheet) return;
+      btn.style.display = 'flex'; // garante visível no mobile
+      btn.addEventListener('click', () => {
+        const open = sheet.style.display === 'block';
+        sheet.style.display = open ? 'none' : 'block';
+        btn.setAttribute('aria-expanded', String(!open));
+      });
+    })();
+  </script>
 
 </body>
 </html>

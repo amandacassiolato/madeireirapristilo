@@ -610,3 +610,39 @@ h1,h2,h3 { letter-spacing: .2px; }
 }
 
 #projetos{ margin-top: clamp(3.5rem, 6vw, 5.5rem); }
+
+/* === HOTFIX: header rente ao carrossel, cores e mobile menu === */
+
+/* 1) Header e carrossel sem buraco */
+body{ padding-top: 0 !important; }
+.hero-carousel{ margin-top: 0 !important; }
+
+/* 2) Deixe o header realmente no topo por cima do carrossel */
+.topbar{
+  position: sticky !important;  /* ou fixed, se preferir fixo */
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  background: color-mix(in oklab, white 62%, transparent) !important; /* translúcido */
+}
+
+/* 3) Textos do carrossel: garantir branco (evita "ficar azul") */
+.hero-carousel .overlay h1,
+.hero-carousel .overlay h2,
+.hero-carousel .overlay p{
+  color: #fff !important;
+}
+
+/* 4) Hambúrguer claro e lógico no mobile */
+@media (max-width:780px){
+  .menu-toggle{ display:flex !important; }
+  .main-nav{ display:none !important; }   /* esconde o menu desktop */
+  /* o .mobile-menu começa escondido (JS vai abrir/fechar) */
+  .mobile-menu{ display:none; }
+  /* toque maior e ícone sempre visível */
+  .menu-toggle svg{ width:32px; height:32px; }
+}
+
+/* 5) (opcional) reduzir largura do menu no desktop */
+@media (min-width:781px){
+  .mainmenu{ max-width: 960px !important; margin: 0 auto !important; }
+}
