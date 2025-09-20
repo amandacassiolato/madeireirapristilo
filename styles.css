@@ -190,8 +190,30 @@
 img{max-width:100%;display:block;height:auto}a{color:#0c4a6e;text-decoration:none}a:hover{text-decoration:underline}
 .container{width:min(1120px,92%);margin-inline:auto}.flex{display:flex;gap:1rem}.between{justify-content:space-between}.center{align-items:center}.top{align-items:flex-start}
 .grid{display:grid;gap:2rem}.grid.two{grid-template-columns:1.1fr 0.9fr}.grid.three{grid-template-columns:repeat(3,1fr)}
-.btn{display:inline-block;background:#0c4a6e;color:#fff;padding:.85rem 1.2rem;border-radius:999px;font-weight:700;border:2px solid transparent}
-.btn:hover{text-decoration:none;filter:brightness(1.05)}.btn.outline{background:#fff;color:#0c4a6e;border-color:#0c4a6e}.btn.small{padding:.5rem .9rem;font-size:.95rem}
+.btn {
+  display: inline-block;
+  background: #7c4a1e;
+  color: #fff;
+  padding: .85rem 1.2rem;
+  border-radius: 999px;
+  font-weight: 700;
+  border: 2px solid transparent;
+  transition: background .2s, color .2s;
+}
+.btn:hover {
+  text-decoration: none;
+  filter: brightness(1.05);
+  background: #633816;
+}
+.btn.outline {
+  background: #fff;
+  color: #7c4a1e;
+  border-color: #7c4a1e;
+}
+.btn.small {
+  padding: .5rem .9rem;
+  font-size: .95rem;
+}
 .topbar{
   position:fixed;
   top:0;
@@ -250,7 +272,16 @@ body{padding-top:92px;}
 .card{background:#fff;border:1px solid #e5e7eb;border-radius:16px;padding:1.2rem;box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .gallery figcaption{padding:.6rem;color:#475569;font-size:.95rem}.contact .contact-list{list-style:none;padding:0;margin:0 0 1rem;color:#334155}
 .contact label{display:block;margin:.6rem 0;font-weight:600}.contact input,.contact textarea{width:100%;margin-top:.35rem;padding:.75rem .9rem;border-radius:12px;border:1px solid #cbd5e1;font:inherit}
-.footer{background:#0b1220;color:#cbd5e1;padding:2rem 0}.footer a{color:#cbd5e1}.footer .brand span{color:#fff}
+.footer {
+  background: linear-gradient(rgba(30,23,10,0.92),rgba(30,23,10,0.97)), url('/assets/hero-madeiras-serradas2.webp') center/cover no-repeat;
+  color: #f3e9e0;
+  padding: 2rem 0;
+}
+.footer a { color: #f3e9e0; }
+.footer .brand span { color: #fff; }
+.footer .brand img {
+  filter: brightness(0) invert(1) grayscale(1) contrast(1.2);
+}
 .floating-whatsapp{position:fixed;right:1rem;bottom:1rem;background:#25D366;color:#0b1220;padding:.8rem 1rem;border-radius:999px;font-weight:800;box-shadow:0 10px 24px rgba(0,0,0,.18)}
 
 
