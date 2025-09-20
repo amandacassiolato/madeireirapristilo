@@ -82,9 +82,11 @@
 <body>
   <header class="topbar">
     <div class="container mainmenu">
-      <!-- Botão do menu só aparece no mobile pelo CSS -->
+      <button class="menu-toggle" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false" style="display:none">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/><rect y="14" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/><rect y="21" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/></svg>
+      </button>
       <a class="brand center-logo" href="#inicio" aria-label="Início">
-  <img src="/assets/logo.webp" width="140" height="140" style="object-fit:contain;max-width:160px;max-height:140px;" alt="Logo Madeireira Pristilo">
+        <img src="/assets/logo.webp" width="140" height="140" style="object-fit:contain;max-width:160px;max-height:140px;" alt="Logo Madeireira Pristilo">
       </a>
       <nav aria-label="Menu principal" class="main-nav">
         <a href="#produtos">Produtos</a>
@@ -241,9 +243,6 @@
             <li><strong>Endereço:</strong> R. Consolação, 191 - Jardim Klayton, Birigui - SP, 16203-031</li>
 <li><strong>Google Maps:</strong> <a href="https://share.google/QkQ7jKBcRi5yyNMFE" target="_blank" rel="noopener nofollow">Ver no Google</a></li>
           </ul>
-<div class="map-embed" style="margin-top:1.2rem;">
-  <iframe src="https://www.google.com/maps/embed?pb=!4v1737280000000!6m8!1m7!1sCAoSLEFGMVFpcE5YaUROdV9XM1I1dXdWejRzYXZLb2QtcmQ2WkhYUmNwR2hHaVgx!2m2!1d-21.2892197!2d-50.3329697!3f0!4f0!5f0.7820865974627469" width="100%" height="300" style="border:0;border-radius:12px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
         </div>
         <form id="form-orcamento" class="card" action="https://formsubmit.co/contato@madeireirapristilo.com.br" method="POST">
           <input type="hidden" name="_captcha" value="false">
@@ -290,9 +289,10 @@
 
   <a class="floating-whatsapp" href="https://wa.me/5518996732323?text=Olá%20Madeireira%20Pristilo,%20quero%20um%20orçamento." aria-label="Falar no WhatsApp">WhatsApp</a>
 
+
   <a class="mobile-call" href="tel:+551836428182" aria-label="Ligar agora para (18) 3642-8182">Ligar agora</a>
-<script defer src="/script.js"></script>
-<div class="mobile-bar"><a class="call" href="tel:+551836428182" aria-label="Ligar agora para (18) 3642-8182">Ligar agora</a><a class="wa" href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." aria-label="Falar no WhatsApp">WhatsApp</a></div>
+  <script defer src="/script.js"></script>
+  <div class="mobile-bar"><a class="call" href="tel:+551836428182" aria-label="Ligar agora para (18) 3642-8182">Ligar agora</a><a class="wa" href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." aria-label="Falar no WhatsApp">WhatsApp</a></div>
 
 
 

@@ -33,7 +33,7 @@
 .main-nav a:not(.btn):hover::after{ transform:scaleX(1); }
 
 /* Botão do menu (hamburger) com área maior de toque */
-.menu-toggle{ border-radius:12px; padding:.35rem; }
+.menu-toggle{ border-radius:12px; padding:.35rem; background:none; border:none; cursor:pointer; display:none; align-items:center; justify-content:center; }
 
 /* Mobile menu com “sheet” mais caprichado */
 @media (max-width:780px){
@@ -73,15 +73,12 @@
     display: none !important;
   }
   .menu-toggle {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 0 0.5rem 0 0;
-    margin-left: auto;
+    display: flex !important;
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
     z-index: 3;
-    display: flex;
-    align-items: center;
   }
   .mobile-menu {
     display: none;
@@ -224,6 +221,7 @@ body{padding-top:92px;}
 .footer{background:#0b1220;color:#cbd5e1;padding:2rem 0}.footer a{color:#cbd5e1}.footer .brand span{color:#fff}
 .floating-whatsapp{position:fixed;right:1rem;bottom:1rem;background:#25D366;color:#0b1220;padding:.8rem 1rem;border-radius:999px;font-weight:800;box-shadow:0 10px 24px rgba(0,0,0,.18)}
 
+
 /* HERO CAROUSEL */
 .hero-carousel{position:relative;overflow:hidden}
 .hero-carousel .slides{position:relative;height:62vh;min-height:420px}
@@ -243,6 +241,56 @@ body{padding-top:92px;}
 .hero-carousel .dots{position:absolute;left:0;right:0;bottom:14px;display:flex;gap:.5rem;justify-content:center}
 .hero-carousel .dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.6);cursor:pointer}
 .hero-carousel .dots button.active{background:#fff}
+
+@media (max-width: 780px) {
+  .hero-carousel .slides {
+    height: 38vh;
+    min-height: 220px;
+    max-height: 340px;
+  }
+  .hero-carousel .overlay {
+    padding: 0;
+    background: linear-gradient(180deg,rgba(0,0,0,0.36) 0%,rgba(0,0,0,0.52) 100%) !important;
+    align-items: flex-start !important;
+    justify-content: flex-end !important;
+    text-align: left !important;
+  }
+  .hero-carousel .overlay > * {
+    margin-left: 4vw;
+    margin-right: 4vw;
+    max-width: 95vw;
+  }
+  .hero-carousel h1, .hero-carousel h2 {
+    font-size: 1.18rem !important;
+    line-height: 1.18;
+    margin-bottom: 0.35rem;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+  .hero-carousel p {
+    font-size: 0.98rem !important;
+    margin-bottom: 0.7rem;
+    color: #f3e9e0;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.18);
+  }
+  .hero-carousel .cta-row {
+    gap: 0.6rem;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+  .hero-carousel .nav {
+    width: 36px;
+    height: 36px;
+    top: auto;
+    bottom: 18px;
+    transform: none;
+  }
+  .hero-carousel .prev { left: 10px; }
+  .hero-carousel .next { right: 10px; }
+  .hero-carousel .dots {
+    bottom: 8px;
+  }
+}
 
 /* Responsive */
 @media (max-width: 960px){

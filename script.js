@@ -2,6 +2,17 @@
 document.addEventListener('DOMContentLoaded', function() {
   const toggle = document.querySelector('.menu-toggle');
   const mobileMenu = document.getElementById('mobileMenu');
+  // Exibe o botão hamburger apenas no mobile
+  function updateMenuToggleDisplay() {
+    if (window.innerWidth <= 780) {
+      if (toggle) toggle.style.display = 'flex';
+    } else {
+      if (toggle) toggle.style.display = 'none';
+      if (mobileMenu) mobileMenu.classList.remove('open');
+    }
+  }
+  window.addEventListener('resize', updateMenuToggleDisplay);
+  updateMenuToggleDisplay();
   if (toggle && mobileMenu) {
     toggle.addEventListener('click', function() {
       const isOpen = mobileMenu.classList.toggle('open');
