@@ -642,3 +642,16 @@ body{ padding-top:0 !important; }
   background: color-mix(in oklab, white 92%, transparent);
   box-shadow: 0 2px 16px rgba(0,0,0,.10);
 }
+
+/* FORÇAR ALTURA MENOR DO HEADER - DESKTOP */
+@media (min-width: 781px) {
+  .topbar {
+    min-height: 40px !important;
+    max-height: 40px !important;
+  }
+  .topbar .mainmenu, .mainmenu {
+    padding: 0.2rem 0 !important;
+    min-height: 40px !important;
+    max-height: 40px !important;
+  }
+}
