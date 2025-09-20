@@ -1,35 +1,27 @@
-/* === FIXES: background layering & menu visibility (added by ChatGPT) === */
-html, body { background: transparent; }
-body { position: relative; }
-.topbar, main, footer { position: relative; z-index: 2; }
-/* === END FIXES === */
 
-body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  background: url('/assets/back3.webp') center center / cover no-repeat;
-  background-attachment: fixed;
-  opacity: 0.45;
-  pointer-events: none;
-  will-change: transform;
+/* === THEME BACKGROUND (reworked) === */
+html, body {
+  height: 100%;
+  margin: 0;
+  background-color: #0b1220; /* deep slate to avoid white bands */
 }
-body::after {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
-  background: linear-gradient(180deg,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.8) 100%);
-  pointer-events: none;
-  will-change: transform;
+body {
+  /* stacked backgrounds: gradient overlay + hero photo */
+  background-image:
+    linear-gradient(180deg, rgba(5, 10, 25, 0.72) 0%, rgba(5, 10, 25, 0.56) 40%, rgba(5, 10, 25, 0.40) 100%),
+    url('/assets/back3.webp');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* desktop parallax feel */
+  color: #0f172a; /* slate-900 */
 }
+
+@media (max-width: 820px){
+  body { background-attachment: scroll; }
+}
+/* === END THEME BACKGROUND === */
+
 /* Menu mobile: logotipo centralizado, ícone à direita, submenu */
 @media (max-width: 780px) {
   .mainmenu {
@@ -368,8 +360,6 @@ h1,h2,h3 { letter-spacing: .2px; }
 
 
 /* ensure gradient sits above photo, under content */
-body::after { z-index: 1; }
-
 /* mobile menu visibility defaults */
 .mobile-menu { display: none; }
 
@@ -378,3 +368,73 @@ body::after { z-index: 1; }
   .mobile-menu { display: none; }
   .mobile-menu.open { display: flex; }
 }
+
+
+/* === SURFACE & LAYOUT POLISH === */
+.topbar, header.site-header {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(255,255,255,0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+main, .section, .content, .container {
+  position: relative;
+}
+
+.card, .feature, .panel, .box {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+h1, h2, h3, h4 { color: #0b1220; letter-spacing: -0.015em; }
+p, li, span, a { color: #1f2937; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.button, .btn {
+  background: #0ea5e9;
+  color: #0b1220;
+  font-weight: 700;
+  border-radius: 12px;
+  padding: .8rem 1rem;
+  border: none;
+  box-shadow: 0 6px 20px rgba(14, 165, 233, .25);
+}
+.button.alt, .btn.alt { background: #10b981; box-shadow: 0 6px 20px rgba(16, 185, 129, .25); }
+/* === END SURFACE & LAYOUT POLISH === */
+
+
+/* === NAV VISIBILITY === */
+.main-nav { display: flex; gap: 1.25rem; align-items: center; }
+.mobile-menu { display: none; }
+
+@media (max-width: 780px){
+  .main-nav { display: none !important; }
+  .mobile-menu {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: #ffffff;
+    border-radius: 0 0 18px 18px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 18px 40px rgba(2,6,23,.10);
+    padding: 1rem .75rem 1.1rem;
+    flex-direction: column; gap: 0.85rem; align-items: center;
+    z-index: 60;
+  }
+  .mobile-menu.open { display: flex; }
+}
+/* === END NAV VISIBILITY === */
+
+
+/* === FOOTER SURFACE === */
+footer, .site-footer {
+  background: rgba(255,255,255,0.90);
+  color: #0f172a;
+  border-top: 1px solid #e5e7eb;
+}
+/* === END FOOTER SURFACE === */
