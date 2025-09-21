@@ -1,0 +1,97 @@
+/* === Paleta local (pode herdar do tema) === */
+:root{
+  --mvv-brown: #7b4e27;
+  --mvv-brown-2: #b07b4e;
+  --mvv-ink: #2b231b;
+  --mvv-card: #ffffff;
+  --mvv-card-bd: #f2ebe6;
+}
+
+/* ====== Seção “O que nos diferencia” (cards) ====== */
+.feature-card{
+  background: var(--mvv-card);
+  border: 1px solid var(--mvv-card-bd);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.feature-card h4{
+  margin: 0 0 .25rem;
+  color: var(--mvv-brown);
+  font-weight: 700;
+}
+.feature-card p{ margin: .25rem 0 0; color: var(--mvv-ink); }
+.feature-card:hover{ box-shadow: 0 8px 22px rgba(0,0,0,.06); transform: translateY(-1px); }
+
+/* ====== “Nossos Valores” (grade de 2×2 no desktop) ====== */
+.values-grid{
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1024px){ .values-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px){  .values-grid{ grid-template-columns: 1fr; } }
+
+.values-grid .value-card{
+  background: var(--mvv-card);
+  border: 1px solid var(--mvv-card-bd);
+  border-radius: 16px;
+  padding: 1rem 1.1rem;
+}
+.values-grid .value-card h4{
+  margin: .25rem 0;
+  color: var(--mvv-brown);
+  font-weight: 700;
+}
+.values-grid .value-card p{ margin: .25rem 0 0; color: var(--mvv-ink); }
+
+/* ====== MVV (Missão / Visão / Valores) ====== */
+.mvv{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+@media (max-width: 960px){ .mvv{ grid-template-columns: 1fr; } }
+
+.mvv__title{
+  color: var(--mvv-brown);
+  font-size: 2rem;
+  line-height: 1.15;
+  margin: .25rem 0 .5rem;
+  letter-spacing: .2px;
+}
+.mvv__text{
+  color: var(--mvv-ink);
+  font-size: 1.08rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+.mvv__icon{
+  display: grid;
+  place-items: center;
+  margin-bottom: .5rem;
+}
+.mvv__icon svg{ display:block; }
+
+/* ====== Cabeçalhos de seção locais ====== */
+.section-head h2{ color: var(--mvv-brown); }
+.section-head p{ color: var(--mvv-brown-2); }
+
+/* ====== Grid de 2 colunas (história x imagem+cards) ====== */
+.grid.two{
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.2fr 1fr;
+}
+@media (max-width: 960px){ .grid.two{ grid-template-columns: 1fr; } }
+
+/* ====== Divisor sutil ====== */
+.divider{
+  height: 8px;
+  background: var(--mvv-brown-2);
+  border-radius: 8px;
+  margin: 2rem 0;
+}

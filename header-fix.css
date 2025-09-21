@@ -1,0 +1,41 @@
+/* HEADER FIX – remove a faixa cinza sem perder layout */
+:root{
+  --header-bg: transparent;
+}
+header,
+.site-header,
+.header,
+.topbar,
+.navbar,
+#header,
+#top,
+.header-wrapper{
+  background: var(--header-bg) !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+header::before,
+.site-header::before,
+.header::before,
+.topbar::before,
+.navbar::before{
+  content: none !important;
+}
+.header-line,
+.topbar-line,
+.navbar-line{
+  display:none !important;
+}
+header .container,
+.site-header .container,
+.navbar .container{
+  min-height: inherit;
+  padding-top: inherit;
+  padding-bottom: inherit;
+}
+@media (max-width: 768px){
+  .logo{z-index:3; position:relative}
+  .navbar-toggle, .menu-toggle, .hamburger{
+    z-index:4; position:relative;
+  }
+}
