@@ -1,323 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Madeireira Pristilo Birigui | Madeiras Serradas, Forros e Telhas | Atende Araçatuba</title>
-  <meta name="description" content="Madeireira Pristilo em Birigui: madeiras serradas, forros, telhas e construção. Peroba, Cambará, Cumaru, Eucalipto. Atendemos Birigui, Araçatuba e região. Orçamento grátis WhatsApp.">
-  <meta name="keywords" content="madeireira birigui, madeireira araçatuba, madeireira pristilo, madeiras birigui, madeiras pristilo, madeiras serradas birigui, forro cedrinho birigui, telhas birigui, construção birigui, materiais construção araçatuba">
-  <link rel="canonical" href="https://pristilomadeiras.com.br/">
-  <meta name="robots" content="index,follow,max-image-preview:large">
-  <meta name="theme-color" content="#0c4a6e">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Madeireira Pristilo Birigui | Madeiras Serradas e Telhas">
-  <meta property="og:description" content="Madeireira em Birigui: madeiras serradas, forros, telhas. Atendemos Araçatuba e região. Orçamento grátis WhatsApp.">
-  <meta property="og:image" content="/assets/hero-madeiras-serradas1.webp">
-  <meta property="og:url" content="https://pristilomadeiras.com.br/">
-  <meta property="og:site_name" content="Madeireira Pristilo">
-  <link rel="icon" href="/assets/logo.png" type="image/png">
-  
-  <!-- fetchpriority no LCP substitui preload aqui; removido preload com arquivos inexistentes -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Madeireira Pristilo | Madeiras Serradas, Cortes Sob Medida e Entrega Rápida</title>
+  <meta name="description" content="Madeireira em Birigui com madeiras serradas de qualidade, cortes sob medida e entrega rápida. Peça orçamento pelo WhatsApp." />
+  <meta name="theme-color" content="#7b4e27" />
 
-  <link rel="stylesheet" href="/styles.css">
+  <!-- CSS do site -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="header-fix.css" />
+  <link rel="stylesheet" href="mvv.css" />
 
-  <!-- Schemas -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Madeireira Pristilo",
-    "image": "/assets/hero-madeiras-serradas1.webp",
-    "url": "https://www.madeireirapristilo.com.br/",
-    "telephone": "+55-18-3642-8182",
-    "priceRange": "$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "R. Consolação, 191",
-      "addressLocality": "Birigui",
-      "addressRegion": "SP",
-      "postalCode": "16203-031",
-      "addressCountry": "BR"
-    },
-    "sameAs": ["https://share.google/QkQ7jKBcRi5yyNMFE"],
-    "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"08:00","closes":"17:30"}]
+  <style>
+  /* === HERO – ajustes mobile === */
+  @media (max-width: 640px){
+    /* remove dots no mobile */
+    .hero-carousel .dots{ display:none !important; }
+
+    /* setas no centro vertical */
+    .hero-carousel{ position: relative; }
+    .hero-carousel .nav{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+      width: 46px; height: 46px;
+      border-radius: 999px;
+      background: rgba(0,0,0,.35);
+      color: #fff;
+      border: 0;
+      display: grid; place-items: center;
+      z-index: 5;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .hero-carousel .nav.prev{ left: 8px; }
+    .hero-carousel .nav.next{ right: 8px; }
+    .hero-carousel .nav:focus{ outline: none; box-shadow: 0 0 0 3px rgba(123,78,39,.35); }
   }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Vocês fazem cortes sob medida?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sim, realizamos cortes sob medida conforme o projeto e entregamos com agilidade." }
-      },
-      {
-        "@type": "Question",
-        "name": "Entregam em outras cidades?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Atendemos região metropolitana e cidades próximas. Consulte prazos e valores." }
-      }
-    ]
+
+  /* desktop: dots visíveis e alvo de clique maior */
+  @media (min-width: 641px){
+    .hero-carousel .dots button{
+      width: 16px; height: 16px;
+      margin: 0 6px;
+      border: 0; border-radius: 50%;
+    }
   }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Produtos - Madeireira Pristilo",
-    "itemListElement": [
-      { "@type": "Product", "name": "Madeiras serradas: Peroba, Cambará, Cumaru, Eucalipto" },
-      { "@type": "Product", "name": "Forro de Cedrinho e Pinus" },
-      { "@type": "Product", "name": "Guarnição" },
-      { "@type": "Product", "name": "Telhas: romana, portuguesa (vermelha e branca)" },
-      { "@type": "Product", "name": "Telha de fibrocimento" },
-      { "@type": "Product", "name": "Pregos" },
-      { "@type": "Product", "name": "Tábuas de Cedrinho e Pinus" },
-      { "@type": "Product", "name": "Portas de madeira" },
-      { "@type": "Product", "name": "Fechaduras e dobradiças" }
-    ]
-  }
-  </script>
+  </style>
 </head>
 <body>
+  <!-- Header / Menu -->
   <header class="topbar">
     <div class="container mainmenu">
       <button class="menu-toggle" aria-label="Abrir menu" aria-controls="mobileMenu" aria-expanded="false" style="display:none">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/><rect y="14" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/><rect y="21" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/></svg>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="32" height="3.5" rx="1.75" fill="#7b4e27"/><rect y="14" width="32" height="3.5" rx="1.75" fill="#7b4e27"/><rect y="21" width="32" height="3.5" rx="1.75" fill="#7b4e27"/></svg>
       </button>
-      <a class="brand center-logo" href="#inicio" aria-label="Início">
-     <img src="/assets/logo.webp"
-       srcset="/assets/logo-155x100.webp 155w, /assets/logo-310x200.webp 310w, /assets/logo.webp 640w"
-             sizes="(max-width:640px) 140px, 155px"
-             alt="Logo Madeireira Pristilo" width="155" height="100"
-             style="object-fit:contain;max-width:160px;max-height:140px;"
-       decoding="async">
+
+      <a class="brand center-logo" href="index.html" aria-label="Voltar ao início">
+        <img src="assets/logo.webp" width="140" height="140" style="object-fit:contain;max-width:160px;max-height:140px" alt="Logo Madeireira Pristilo" />
       </a>
+
       <nav aria-label="Menu principal" class="main-nav">
         <a href="#produtos">Produtos</a>
-        <a href="/sobre-nos.html" id="sobre-link">Sobre nós</a>
+        <a href="sobre-nos.html">Sobre nós</a>
         <a href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." target="_blank" class="btn small">Solicitar Orçamento</a>
       </nav>
+
       <div class="mobile-menu" id="mobileMenu">
         <a href="#produtos">Produtos</a>
-        <a href="/sobre-nos.html" id="sobre-link-mobile">Sobre nós</a>
+        <a href="sobre-nos.html">Sobre nós</a>
         <a href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." target="_blank" class="btn small">Solicitar Orçamento</a>
       </div>
     </div>
   </header>
 
-  <main id="inicio">
-    <!-- HERO CAROUSEL with <picture> and srcset -->
-    <section class="hero-carousel" aria-label="Destaques">
+  <main>
+    <!-- HERO / Carrossel -->
+    <section class="hero-carousel">
       <div class="slides">
-  <div class="slide is-active" id="slide-1">
-    <picture>
-      <source srcset="/assets/hero-madeiras-serradas1-768.webp 768w, /assets/hero-madeiras-serradas1-1200.webp 1200w, /assets/hero-madeiras-serradas1-1920.webp 1920w"
-        type="image/webp"
-        sizes="100vw">
-      <img src="/assets/hero-madeiras-serradas1.webp"
-           alt="Madeiras serradas de qualidade e durabilidade"
-           width="1920" height="980"
-           fetchpriority="high" decoding="async" loading="eager"
-           style="width:100%;height:100%;object-fit:cover;display:block">
-    </picture>
-    <div class="overlay">
-      <h1>Seu projeto em madeira, do orçamento à entrega</h1>
-      <p>Velocidade, qualidade e cortes sob medida.</p>
-      <div class="cta-row">
-        <a class="btn" href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento.">Pedir orçamento</a>
-        <a class="btn outline" href="#produtos">Ver produtos</a>
+        <div class="slide active">
+          <img src="assets/hero-madeiras-serradas1.webp" alt="Madeiras serradas de qualidade" />
+        </div>
+        <div class="slide">
+          <img src="assets/hero-madeiras-serradas2.webp" alt="Variedade de madeiras para construção" />
+        </div>
+        <div class="slide">
+          <img src="assets/hero-madeiras-serradas3.webp" alt="Madeireira com estoque sempre pronto" />
+        </div>
       </div>
-    </div>
-  </div>
-
-  <div class="slide" id="slide-2">
-    <img src="/assets/hero-madeiras-serradas2.webp"
-         alt="Madeiras serradas - foto 2" width="1920" height="980" loading="lazy" decoding="async">
-    <div class="overlay">
-      <h2>Madeiras serradas</h2>
-      <p>Peroba, Cambará, Cumaru e Eucalipto — estoque pronto.</p>
-    </div>
-  </div>
-
-  <div class="slide" id="slide-3">
-    <img src="/assets/hero-madeiras-serradas3.webp"
-         alt="Madeiras serradas - foto 3" width="1920" height="980" loading="lazy" decoding="async">
-    <div class="overlay">
-      <h2>Forros e Telhas</h2>
-      <p>Cedrinho, Pinus, Romana, Portuguesa e Fibrocimento.</p>
-    </div>
-  </div>
-</div>
-<button class="nav prev" aria-label="Slide anterior">‹</button>
-      <button class="nav next" aria-label="Próximo slide">›</button>
-      <div class="dots" role="tablist" aria-label="Indicadores de slides"></div>
-    </section>
-
-    <!-- PRODUTOS -->
-
-<section id="produtos" class="section alt">
-  <div class="container">
-    <header class="section-head">
-      <h2>Linha de Produtos</h2>
-      <p>Estoque completo para sua obra.</p>
-    </header>
-    <div class="grid three cards product-grid">
-      <article class="card product">
-  <img src="/assets/madeiraserradao.webp" alt="Madeiras serradas" width="600" height="400" loading="lazy" decoding="async">
-        <div class="p">
-          <h3>Madeiras serradas</h3>
-          <p>Peroba, Cambará, Cumaru e Eucalipto.</p>
-        </div>
-      </article>
-      <article class="card product">
-        <img src="/assets/forro.webp" alt="Forros de Cedrinho e Pinus" width="600" height="400" loading="lazy" decoding="async">
-        <div class="p">
-          <h3>Forros</h3>
-          <p>Cedrinho e Pinus.</p>
-        </div>
-      </article>
-      <article class="card product">
-  <img src="/assets/telha.webp" alt="Telhas cerâmicas Romana e Portuguesa (vermelha e branca)" width="600" height="400" loading="lazy" decoding="async">
-        <div class="p">
-          <h3>Telhas cerâmicas</h3>
-          <p>Romana e Portuguesa (vermelha e branca).</p>
-        </div>
-      </article>
-      <article class="card product">
-  <img src="/assets/fibrocimento.webp" alt="Telha de fibrocimento" width="600" height="400" loading="lazy" decoding="async">
-        <div class="p">
-          <h3>Telha de fibrocimento</h3>
-          <p>Diversas medidas e espessuras.</p>
-        </div>
-      </article>
-      <article class="card product">
-        <img src="/assets/tabua.webp" alt="Tábuas" width="600" height="400" loading="lazy" decoding="async">
-        <div class="p">
-          <h3>Tábuas</h3>
-          <p>Cedrinho e Pinus.</p>
-        </div>
-      </article>
-      <article class="card product">
-        <img src="/assets/porta.webp" alt="Portas de madeira e acessórios" width="600" height="400" loading="lazy" decoding="async">
-        <div class="p">
-          <h3>Portas e outros</h3>
-          <p>Portas de madeira, guarnições para portas e janelas, fechaduras, dobradiças, pregos e bitolas.</p>
-        </div>
-      </article>
-      <!-- Card Ferragens removido -->
-    </div>
-  </div>
-</section>
-
-
-    <!-- PROJETOS / GALERIA -->
-    <section id="projetos" class="section">
-      <div class="container">
-        <header class="section-head">
-          <h2>Projetos e aplicações</h2>
-          <p>Alguns exemplos do que entregamos.</p>
-        </header>
-        <div class="grid three gallery">
-          <figure class="card">
-            <img src="/assets/telhado.webp" alt="Estrutura de telhado em madeira" width="768" height="392" loading="lazy" decoding="async">
-            <figcaption>Estrutura de telhado</figcaption>
-          </figure>
-          <figure class="card">
-            <img src="/assets/deck.webp" alt="Deck de madeira" width="768" height="392" loading="lazy" decoding="async">
-            <figcaption>Deck de madeira</figcaption>
-          </figure>
-          <figure class="card">
-            <img src="/assets/pergolado.webp" alt="Pergolado em madeira" width="768" height="392" loading="lazy" decoding="async">
-            <figcaption>Pergolado</figcaption>
-          </figure>
-        </div>
+      <!-- setas -->
+      <button class="nav prev" aria-label="Slide anterior">&#10094;</button>
+      <button class="nav next" aria-label="Próximo slide">&#10095;</button>
+      <!-- dots -->
+      <div class="dots">
+        <button aria-label="Slide 1"></button>
+        <button aria-label="Slide 2"></button>
+        <button aria-label="Slide 3"></button>
       </div>
     </section>
 
-    <!-- CONTATO -->
-    <section id="contato" class="section contact" style="margin:3rem 0 2.5rem">
+    <!-- resto do conteúdo da home... -->
+  </main>
 
-      <div class="container grid two">
-        <div>
-          <h2>Fale Conosco</h2>
-          <p>Visite nossa loja ou peça um orçamento agora mesmo.</p>
-          <ul class="contact-list">
-            <li><strong>WhatsApp:</strong> <a href="https://wa.me/5518996732323" rel="nofollow noopener">+55 (18) 99673-2323</a></li>
-            <li><strong>Telefone:</strong> <a href="tel:+551836428182">+55 (18) 3642-8182</a></li>
-            <li><strong>E-mail:</strong> <a href="mailto:pristilomadeireira@gmail.com">pristilomadeireira@gmail.com</a></li>
-            <li><strong>Endereço:</strong> R. Consolação, 191 - Jardim Klayton, Birigui - SP, 16203-031</li>
-            <li><strong>Horário:</strong> Segunda a Sábado, das 8h às 17h30</li>
-          </ul>
-        </div>
-        <div>
-          <div id="map-holder" style="width:100%;height:300px;border-radius:12px;overflow:hidden;background:#f3eee8"></div>
-          <script>
-            (function(){
-              const el = document.getElementById('map-holder');
-              if ('IntersectionObserver' in window && el){
-                new IntersectionObserver((entries,obs)=>{
-                  entries.forEach(e=>{
-                    if(e.isIntersecting){
-                      el.innerHTML = '<iframe title="Localização - Madeireira Pristilo" src="https://www.google.com/maps?q=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031&output=embed" width="100%" height="300" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>';
-                      obs.disconnect();
-                    }
-                  });
-                }).observe(el);
-              }
-            })();
-          </script>
-          <div style="text-align:center;margin-top:1rem">
-            <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031" target="_blank" rel="noopener">Como chegar</a>
-          </div>
-        </div>
+  <!-- Rodapé -->
+  <footer class="footer" id="footer">
+    <div class="container flex between top">
+      <div class="col">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.webp" width="100" height="100" style="object-fit:contain;max-width:110px;max-height:100px" alt="Logo Madeireira Pristilo" />
+          <span>Madeireira <strong>Pristilo</strong></span>
+        </a>
+        <p class="tiny footer-legal">Pristilo Comércio de Madeiras LTDA — Bela Vista Madeireira<br>© <span id="year"></span> Madeireira Pristilo. Todos os direitos reservados.</p>
       </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer class="footer" id="footer">
-      <div class="container flex between top">
-        <div class="col">
-          <a class="brand" href="index.html">
-      <img src="assets/logo.webp" width="100" height="100"
-        srcset="assets/logo-155x100.webp 155w, assets/logo-310x200.webp 310w, assets/logo.webp 640w"
-        sizes="(max-width:640px) 100px, 110px"
-        style="object-fit:contain;max-width:110px;max-height:100px"
-        alt="Logo Madeireira Pristilo" loading="lazy" decoding="async" />
-            <span>Madeireira <strong>Pristilo</strong></span>
-          </a>
-          <p class="tiny footer-legal">Pristilo Comércio de Madeiras LTDA — Bela Vista Madeireira<br>© <span id="year"></span> Madeireira Pristilo. Todos os direitos reservados.</p>
-        </div>
-        <div class="col">
-          <p><strong>Endereço</strong><br/>R. Consolação, 191 - Jardim Klayton, Birigui - SP, 16203-031</p>
-          <p><strong>Atendimento</strong><br/>Seg a Sáb, 8h às 17h30</p>
-        </div>
+      <div class="col">
+        <p><strong>Endereço</strong><br/>R. Consolação, 191 - Jardim Klayton, Birigui - SP, 16203-031</p>
+        <p><strong>Atendimento</strong><br/>Seg a Sáb, 8h às 17h30</p>
       </div>
-    </footer>
-
-  <a class="floating-whatsapp" href="https://wa.me/5518996732323?text=Olá%20Madeireira%20Pristilo,%20quero%20um%20orçamento." aria-label="Falar no WhatsApp">WhatsApp</a>
-
-
-  <a class="mobile-call" href="tel:+551836428182" aria-label="Ligar agora para (18) 3642-8182">Ligar agora</a>
-  <script defer src="/script.js"></script>
-  <div class="mobile-bar"><a class="call" href="tel:+551836428182" aria-label="Ligar agora para (18) 3642-8182">Ligar agora</a><a class="wa" href="https://wa.me/5518996732323?text=Ol%C3%A1%20Madeireira%20Pristilo,%20quero%20um%20or%C3%A7amento." aria-label="Falar no WhatsApp">WhatsApp</a></div>
+    </div>
+  </footer>
 
   <script>
-    // Toggle simples do menu mobile
-    (function () {
-      const btn = document.querySelector('.menu-toggle');
-      const sheet = document.getElementById('mobileMenu');
-      if(!btn || !sheet) return;
-      btn.style.display = 'flex'; // garante visível no mobile
-      btn.addEventListener('click', () => {
-        const open = sheet.style.display === 'block';
-        sheet.style.display = open ? 'none' : 'block';
-        btn.setAttribute('aria-expanded', String(!open));
-      });
-    })();
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-
 </body>
 </html>
