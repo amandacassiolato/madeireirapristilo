@@ -119,3 +119,10 @@
   border-radius: 8px;
   margin: 2rem 0;
 }
+
+/* ===== Container mais largo para página sobre-nos no desktop ===== */
+@media (min-width: 961px){
+  .container{
+    width: min(1280px, 88%) !important;
+  }
+}
