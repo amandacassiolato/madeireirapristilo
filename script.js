@@ -61,22 +61,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function go(n){
     slides[i].classList.remove('is-active');
-    dotsWrap.children[i]?.classList.remove('active');
+    if (dotsWrap.children[i]) {
+      dotsWrap.children[i].classList.remove('active');
+      dotsWrap.children[i].setAttribute('aria-selected', 'false');
+      dotsWrap.children[i].setAttribute('tabindex', '-1');
+    }
     i = (n + slides.length) % slides.length;
     slides[i].classList.add('is-active');
-    dotsWrap.children[i]?.classList.add('active');
+    if (dotsWrap.children[i]) {
+      dotsWrap.children[i].classList.add('active');
+      dotsWrap.children[i].setAttribute('aria-selected', 'true');
+      dotsWrap.children[i].setAttribute('tabindex', '0');
+      dotsWrap.children[i].focus({ preventScroll: true });
+    }
   }
 
   function next(){ go(i+1); }
   function prev(){ go(i-1); }
 
-  // Build dots
-  slides.forEach((_, idx) => {
-    const b = document.createElement('button');
-    if (idx === 0) b.classList.add('active');
-    b.addEventListener('click', () => { go(idx); resetAuto(); });
-    dotsWrap.appendChild(b);
-  });
+  // Build dots with ARIA
+  if (dotsWrap) {
+    dotsWrap.setAttribute('role', 'tablist');
+    dotsWrap.setAttribute('aria-label', 'Indicadores de slides');
+    slides.forEach((slideEl, idx) => {
+      const b = document.createElement('button');
+      b.setAttribute('role', 'tab');
+      b.setAttribute('aria-label', `Slide ${idx+1}`);
+      const slideId = slideEl.id || `slide-${idx+1}`;
+      slideEl.id = slideId;
+      b.setAttribute('aria-controls', slideId);
+      if (idx === 0) {
+        b.classList.add('active');
+        b.setAttribute('aria-selected', 'true');
+        b.setAttribute('tabindex', '0');
+      } else {
+        b.setAttribute('aria-selected', 'false');
+        b.setAttribute('tabindex', '-1');
+      }
+      b.addEventListener('click', () => { go(idx); resetAuto(); });
+      b.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(idx); resetAuto(); }
+        if (e.key === 'ArrowRight') { e.preventDefault(); next(); resetAuto(); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); resetAuto(); }
+      });
+      dotsWrap.appendChild(b);
+    });
+  }
 
   function resetAuto(){ clearInterval(timer); timer = setInterval(next, 5000); }
   resetAuto();

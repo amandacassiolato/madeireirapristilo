@@ -21,7 +21,12 @@
       </button>
 
       <a class="brand center-logo" href="index.html" aria-label="Voltar ao início">
-        <img src="assets/logo.webp" width="140" height="140" style="object-fit:contain;max-width:160px;max-height:140px" alt="Logo Madeireira Pristilo" />
+     <img src="assets/logo.webp"
+       srcset="assets/logo-155x100.webp 155w, assets/logo-310x200.webp 310w, assets/logo.webp 640w"
+             sizes="(max-width:640px) 140px, 155px"
+             width="155" height="100"
+             style="object-fit:contain;max-width:160px;max-height:140px"
+             alt="Logo Madeireira Pristilo" loading="lazy" decoding="async" />
       </a>
 
       <nav aria-label="Menu principal" class="main-nav">
@@ -59,9 +64,12 @@
 
           <div>
             <picture>
+              <source srcset="assets/hero-madeiras-serradas1.webp 1920w" type="image/webp" sizes="(max-width: 1024px) 100vw, 100vw">
               <img src="assets/hero-madeiras-serradas1.webp"
                    alt="Madeiras serradas de qualidade e durabilidade"
-                   style="width:100%;border-radius:16px" />
+                   width="1920" height="980"
+                   fetchpriority="high" decoding="async" loading="eager"
+                   style="width:100%;border-radius:16px;display:block" />
             </picture>
           </div>
         </div>
@@ -163,10 +171,22 @@
           </ul>
         </div>
         <div>
-          <iframe title="Localização - Madeireira Pristilo"
-                  src="https://www.google.com/maps?q=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031&output=embed"
-                  width="100%" height="300" style="border:0;border-radius:12px" allowfullscreen loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div id="map-holder-sobre" style="width:100%;height:300px;border-radius:12px;overflow:hidden;background:#f3eee8"></div>
+          <script>
+            (function(){
+              const el = document.getElementById('map-holder-sobre');
+              if ('IntersectionObserver' in window && el){
+                new IntersectionObserver((entries,obs)=>{
+                  entries.forEach(e=>{
+                    if(e.isIntersecting){
+                      el.innerHTML = '<iframe title="Localização - Madeireira Pristilo" src="https://www.google.com/maps?q=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031&output=embed" width="100%" height="300" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>';
+                      obs.disconnect();
+                    }
+                  });
+                }).observe(el);
+              }
+            })();
+          </script>
           <div style="text-align:center;margin-top:1rem">
             <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031" target="_blank" rel="noopener">Como chegar</a>
           </div>
@@ -179,7 +199,11 @@
       <div class="container flex between top">
         <div class="col">
           <a class="brand" href="index.html">
-            <img src="assets/logo.webp" width="100" height="100" style="object-fit:contain;max-width:110px;max-height:100px" alt="Logo Madeireira Pristilo" />
+      <img src="assets/logo.webp" width="100" height="100"
+        srcset="assets/logo-155x100.webp 155w, assets/logo-310x200.webp 310w, assets/logo.webp 640w"
+                 sizes="(max-width:640px) 100px, 110px"
+                 style="object-fit:contain;max-width:110px;max-height:100px"
+                 alt="Logo Madeireira Pristilo" loading="lazy" decoding="async" />
             <span>Madeireira <strong>Pristilo</strong></span>
           </a>
           <p class="tiny footer-legal">Pristilo Comércio de Madeiras LTDA — Bela Vista Madeireira<br>© <span id="year"></span> Madeireira Pristilo. Todos os direitos reservados.</p>

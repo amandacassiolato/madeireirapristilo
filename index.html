@@ -16,8 +16,9 @@
   <meta property="og:image" content="/assets/hero-madeiras-serradas1.webp">
   <meta property="og:url" content="https://pristilomadeiras.com.br/">
   <meta property="og:site_name" content="Madeireira Pristilo">
-  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
-  <link rel="preload" as="image" imagesrcset="/assets/hero-madeiras-serradas-480.jpg 480w, /assets/hero-madeiras-serradas-768.jpg 768w, /assets/hero-madeiras-serradas-1280.jpg 1280w, /assets/hero-madeiras-serradas-1920.jpg 1920w" imagesizes="(max-width: 960px) 100vw, 100vw">
+  <link rel="icon" href="/assets/logo.png" type="image/png">
+  
+  <!-- fetchpriority no LCP substitui preload aqui; removido preload com arquivos inexistentes -->
 
   <link rel="stylesheet" href="/styles.css">
 
@@ -27,7 +28,7 @@
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Madeireira Pristilo",
-    "image": "/assets/hero-madeiras-serradas-1280.jpg",
+    "image": "/assets/hero-madeiras-serradas1.webp",
     "url": "https://www.madeireirapristilo.com.br/",
     "telephone": "+55-18-3642-8182",
     "priceRange": "$$",
@@ -87,7 +88,12 @@
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/><rect y="14" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/><rect y="21" width="32" height="3.5" rx="1.75" fill="#0c4a6e"/></svg>
       </button>
       <a class="brand center-logo" href="#inicio" aria-label="Início">
-        <img src="/assets/logo.webp" width="140" height="140" style="object-fit:contain;max-width:160px;max-height:140px;" alt="Logo Madeireira Pristilo">
+     <img src="/assets/logo.webp"
+       srcset="/assets/logo-155x100.webp 155w, /assets/logo-310x200.webp 310w, /assets/logo.webp 640w"
+             sizes="(max-width:640px) 140px, 155px"
+             alt="Logo Madeireira Pristilo" width="155" height="100"
+             style="object-fit:contain;max-width:160px;max-height:140px;"
+       decoding="async">
       </a>
       <nav aria-label="Menu principal" class="main-nav">
         <a href="#produtos">Produtos</a>
@@ -106,9 +112,17 @@
     <!-- HERO CAROUSEL with <picture> and srcset -->
     <section class="hero-carousel" aria-label="Destaques">
       <div class="slides">
-  <div class="slide is-active">
-    <img src="/assets/hero-madeiras-serradas1.webp"
-         alt="Madeiras serradas - foto 1" width="1920" height="980" loading="eager">
+  <div class="slide is-active" id="slide-1">
+    <picture>
+      <source srcset="/assets/hero-madeiras-serradas1.webp 1920w"
+        type="image/webp"
+        sizes="(max-width: 1024px) 100vw, 100vw">
+      <img src="/assets/hero-madeiras-serradas1.webp"
+           alt="Madeiras serradas de qualidade e durabilidade"
+           width="1920" height="980"
+           fetchpriority="high" decoding="async" loading="eager"
+           style="width:100%;height:100%;object-fit:cover;display:block">
+    </picture>
     <div class="overlay">
       <h1>Seu projeto em madeira, do orçamento à entrega</h1>
       <p>Velocidade, qualidade e cortes sob medida.</p>
@@ -119,18 +133,18 @@
     </div>
   </div>
 
-  <div class="slide">
+  <div class="slide" id="slide-2">
     <img src="/assets/hero-madeiras-serradas2.webp"
-         alt="Madeiras serradas - foto 2" width="1920" height="980" loading="lazy">
+         alt="Madeiras serradas - foto 2" width="1920" height="980" loading="lazy" decoding="async">
     <div class="overlay">
       <h2>Madeiras serradas</h2>
       <p>Peroba, Cambará, Cumaru e Eucalipto — estoque pronto.</p>
     </div>
   </div>
 
-  <div class="slide">
+  <div class="slide" id="slide-3">
     <img src="/assets/hero-madeiras-serradas3.webp"
-         alt="Madeiras serradas - foto 3" width="1920" height="980" loading="lazy">
+         alt="Madeiras serradas - foto 3" width="1920" height="980" loading="lazy" decoding="async">
     <div class="overlay">
       <h2>Forros e Telhas</h2>
       <p>Cedrinho, Pinus, Romana, Portuguesa e Fibrocimento.</p>
@@ -152,48 +166,42 @@
     </header>
     <div class="grid three cards product-grid">
       <article class="card product">
-  <img src="/assets/madeiraserradao.webp" alt="Madeiras serradas" width="600" height="400" loading="lazy">
-</picture>
+  <img src="/assets/madeiraserradao.webp" alt="Madeiras serradas" width="600" height="400" loading="lazy" decoding="async">
         <div class="p">
           <h3>Madeiras serradas</h3>
           <p>Peroba, Cambará, Cumaru e Eucalipto.</p>
         </div>
       </article>
       <article class="card product">
-        <img src="/assets/forro.webp" alt="Forros de Cedrinho e Pinus" width="600" height="400" loading="lazy">
-</picture>
+        <img src="/assets/forro.webp" alt="Forros de Cedrinho e Pinus" width="600" height="400" loading="lazy" decoding="async">
         <div class="p">
           <h3>Forros</h3>
           <p>Cedrinho e Pinus.</p>
         </div>
       </article>
       <article class="card product">
-  <img src="/assets/telha.webp" alt="Telhas cerâmicas Romana e Portuguesa (vermelha e branca)" width="600" height="400" loading="lazy">
-</picture>
+  <img src="/assets/telha.webp" alt="Telhas cerâmicas Romana e Portuguesa (vermelha e branca)" width="600" height="400" loading="lazy" decoding="async">
         <div class="p">
           <h3>Telhas cerâmicas</h3>
           <p>Romana e Portuguesa (vermelha e branca).</p>
         </div>
       </article>
       <article class="card product">
-  <img src="/assets/fibrocimento.webp" alt="Telha de fibrocimento" width="600" height="400" loading="lazy">
-</picture>
+  <img src="/assets/fibrocimento.webp" alt="Telha de fibrocimento" width="600" height="400" loading="lazy" decoding="async">
         <div class="p">
           <h3>Telha de fibrocimento</h3>
           <p>Diversas medidas e espessuras.</p>
         </div>
       </article>
       <article class="card product">
-        <img src="/assets/tabua.webp" alt="Tábuas" width="600" height="400" loading="lazy">
-</picture>
+        <img src="/assets/tabua.webp" alt="Tábuas" width="600" height="400" loading="lazy" decoding="async">
         <div class="p">
           <h3>Tábuas</h3>
           <p>Cedrinho e Pinus.</p>
         </div>
       </article>
       <article class="card product">
-        <img src="/assets/porta.webp" alt="Portas de madeira e acessórios" width="600" height="400" loading="lazy">
-</picture>
+        <img src="/assets/porta.webp" alt="Portas de madeira e acessórios" width="600" height="400" loading="lazy" decoding="async">
         <div class="p">
           <h3>Portas e outros</h3>
           <p>Portas de madeira, guarnições para portas e janelas, fechaduras, dobradiças, pregos e bitolas.</p>
@@ -214,15 +222,15 @@
         </header>
         <div class="grid three gallery">
           <figure class="card">
-            <img src="/assets/telhado.webp" alt="Estrutura de telhado em madeira" width="768" height="392" loading="lazy">
+            <img src="/assets/telhado.webp" alt="Estrutura de telhado em madeira" width="768" height="392" loading="lazy" decoding="async">
             <figcaption>Estrutura de telhado</figcaption>
           </figure>
           <figure class="card">
-            <img src="/assets/deck.webp" alt="Deck de madeira" width="768" height="392" loading="lazy">
+            <img src="/assets/deck.webp" alt="Deck de madeira" width="768" height="392" loading="lazy" decoding="async">
             <figcaption>Deck de madeira</figcaption>
           </figure>
           <figure class="card">
-            <img src="/assets/pergolado.webp" alt="Pergolado em madeira" width="768" height="392" loading="lazy">
+            <img src="/assets/pergolado.webp" alt="Pergolado em madeira" width="768" height="392" loading="lazy" decoding="async">
             <figcaption>Pergolado</figcaption>
           </figure>
         </div>
@@ -245,10 +253,22 @@
           </ul>
         </div>
         <div>
-          <iframe title="Localização - Madeireira Pristilo"
-                  src="https://www.google.com/maps?q=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031&output=embed"
-                  width="100%" height="300" style="border:0;border-radius:12px" allowfullscreen loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div id="map-holder" style="width:100%;height:300px;border-radius:12px;overflow:hidden;background:#f3eee8"></div>
+          <script>
+            (function(){
+              const el = document.getElementById('map-holder');
+              if ('IntersectionObserver' in window && el){
+                new IntersectionObserver((entries,obs)=>{
+                  entries.forEach(e=>{
+                    if(e.isIntersecting){
+                      el.innerHTML = '<iframe title="Localização - Madeireira Pristilo" src="https://www.google.com/maps?q=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031&output=embed" width="100%" height="300" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>';
+                      obs.disconnect();
+                    }
+                  });
+                }).observe(el);
+              }
+            })();
+          </script>
           <div style="text-align:center;margin-top:1rem">
             <a class="btn" href="https://www.google.com/maps/dir/?api=1&destination=R.%20Consola%C3%A7%C3%A3o%2C%20191%20-%20Jardim%20Klayton%2C%20Birigui%20-%20SP%2C%2016203-031" target="_blank" rel="noopener">Como chegar</a>
           </div>
@@ -261,7 +281,11 @@
       <div class="container flex between top">
         <div class="col">
           <a class="brand" href="index.html">
-            <img src="assets/logo.webp" width="100" height="100" style="object-fit:contain;max-width:110px;max-height:100px" alt="Logo Madeireira Pristilo" />
+      <img src="assets/logo.webp" width="100" height="100"
+        srcset="assets/logo-155x100.webp 155w, assets/logo-310x200.webp 310w, assets/logo.webp 640w"
+        sizes="(max-width:640px) 100px, 110px"
+        style="object-fit:contain;max-width:110px;max-height:100px"
+        alt="Logo Madeireira Pristilo" loading="lazy" decoding="async" />
             <span>Madeireira <strong>Pristilo</strong></span>
           </a>
           <p class="tiny footer-legal">Pristilo Comércio de Madeiras LTDA — Bela Vista Madeireira<br>© <span id="year"></span> Madeireira Pristilo. Todos os direitos reservados.</p>

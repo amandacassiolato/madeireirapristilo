@@ -464,7 +464,7 @@ body {
 .hero-carousel .prev{left:14px}
 .hero-carousel .next{right:14px}
 .hero-carousel .dots{position:absolute;left:0;right:0;bottom:14px;display:flex;gap:.5rem;justify-content:center}
-.hero-carousel .dots button{width:10px;height:10px;border-radius:50%;border:0;background:rgba(255,255,255,.6);cursor:pointer}
+.hero-carousel .dots button{width:14px;height:14px;margin:0 6px;border-radius:50%;border:0;background:rgba(255,255,255,.6);cursor:pointer;padding:14px;background-clip:content-box}
 .hero-carousel .dots button.active{background:#fff}
 
 @media (max-width: 780px) {
@@ -477,9 +477,8 @@ body {
   }
   .hero-carousel .prev { left: 10px; }
   .hero-carousel .next { right: 10px; }
-  .hero-carousel .dots {
-    bottom: 8px;
-  }
+  .hero-carousel .dots { bottom: 8px; }
+  .hero-carousel .dots button{ width:20px; height:20px; margin:0 8px; padding:14px; }
 }
 
 /* Responsive */
