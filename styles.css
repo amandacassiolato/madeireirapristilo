@@ -696,36 +696,44 @@ body{ padding-top: 0 !important; }
 }
 
 /* === HERO – ajustes mobile === */
-@media (max-width: 640px){
+@media (max-width: 780px){
   /* remove dots no mobile */
   .hero-carousel .dots{ display:none !important; }
 
-  /* setas no centro vertical */
-  .hero-carousel{ position: relative; }
+  /* setas no centro vertical - sobrescreve regras anteriores */
   .hero-carousel .nav{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    bottom: auto;
-    width: 46px; height: 46px;
-    border-radius: 999px;
-    background: rgba(0,0,0,.35);
-    color: #fff;
-    border: 0;
-    display: grid; place-items: center;
-    z-index: 5;
+    position: absolute !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    bottom: auto !important;
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 999px !important;
+    background: rgba(0,0,0,.35) !important;
+    color: #fff !important;
+    border: 0 !important;
+    display: grid !important;
+    place-items: center !important;
+    z-index: 10 !important;
+    cursor: pointer !important;
     -webkit-tap-highlight-color: transparent;
   }
-  .hero-carousel .nav.prev{ left: 8px; }
-  .hero-carousel .nav.next{ right: 8px; }
+  .hero-carousel .nav.prev{ left: 8px !important; }
+  .hero-carousel .nav.next{ right: 8px !important; }
+  .hero-carousel .nav:hover{ background: rgba(0,0,0,.55) !important; }
   .hero-carousel .nav:focus{ outline: none; box-shadow: 0 0 0 3px rgba(123,78,39,.35); }
 }
 
 /* desktop: dots visíveis e alvo de clique maior */
-@media (min-width: 641px){
+@media (min-width: 781px){
+  .hero-carousel .dots{ display: flex !important; }
   .hero-carousel .dots button{
-    width: 16px; height: 16px;
-    margin: 0 6px;
-    border: 0; border-radius: 50%;
+    width: 16px !important;
+    height: 16px !important;
+    margin: 0 6px !important;
+    border: 0 !important;
+    border-radius: 50% !important;
+    padding: 14px !important;
+    background-clip: content-box !important;
   }
 }
