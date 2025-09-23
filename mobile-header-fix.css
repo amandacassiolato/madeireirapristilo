@@ -41,6 +41,8 @@
     z-index: 20 !important;
     padding: .25rem .5rem !important;
     margin: 0 !important;
+    align-self: end !important;
+    margin-bottom: 8px !important;
   }
 
   /* Oculta menu desktop */
