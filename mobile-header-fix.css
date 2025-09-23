@@ -6,22 +6,21 @@
   }
   .topbar .mainmenu{
     display: flex !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     align-items: center !important;
-    padding: 0 1rem !important;
+    padding: 0.8rem 1rem !important;
     min-height: 56px !important;
     position: relative !important;
+    width: 100% !important;
   }
 
   /* Logo centralizado */
   .topbar .brand.center-logo{
-    position: absolute !important;
-    left: 50% !important;
-    top: 50% !important;
-    transform: translate(-50%, -50%) !important;
     display: flex !important;
     align-items: center !important;
     z-index: 5 !important;
+    position: static !important;
+    transform: none !important;
   }
   .topbar .brand.center-logo img{
     height: 52px !important;
@@ -40,8 +39,10 @@
     align-items: center !important;
     justify-content: center !important;
     z-index: 20 !important;
-    padding: .25rem .5rem !important;
+    padding: .5rem !important;
     margin: 0 !important;
+    background: none !important;
+    border: none !important;
   }
 
   /* Oculta menu desktop */
