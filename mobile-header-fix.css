@@ -30,19 +30,20 @@
     object-fit: contain !important;
   }
 
-  /* Hambúrguer na terceira coluna - centralizado verticalmente */
+  /* Hambúrguer na terceira coluna - centralizado com o header */
   .topbar .menu-toggle{
     grid-column: 3 !important;
     justify-self: end !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    position: static !important;
+    position: absolute !important;
+    right: 0.75rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     z-index: 20 !important;
     padding: .25rem .5rem !important;
     margin: 0 !important;
-    align-self: end !important;
-    margin-bottom: 8px !important;
   }
 
   /* Oculta menu desktop */
