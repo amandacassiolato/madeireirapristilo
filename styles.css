@@ -662,7 +662,7 @@ body{ padding-top: 0 !important; }
     right: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 3;
+    z-index: 10;
     background: none;
     border: none;
     padding: 0.2rem 0.5rem;
@@ -679,7 +679,7 @@ body{ padding-top: 0 !important; }
     max-height: 52px;
     display: flex;
     align-items: center;
-    z-index: 2;
+    z-index: 5;
   }
   .main-nav{ display: none !important; }   /* menu desktop some no mobile */
   .mobile-menu{
