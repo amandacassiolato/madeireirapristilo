@@ -12,7 +12,16 @@
     padding: 0 .75rem !important;
   }
 
-  /* Logo maior mas dentro do header */
+  /* Logo na primeira coluna */
+  .topbar .brand.center-logo{
+    grid-column: 1 !important;
+    justify-self: start !important;
+    display: flex !important;
+    align-items: center !important;
+    position: static !important;
+    transform: none !important;
+    z-index: 5 !important;
+  }
   .topbar .brand.center-logo img{
     height: 52px !important;
     max-height: 52px !important;
@@ -20,10 +29,11 @@
     object-fit: contain !important;
   }
 
-  /* Hambúrguer alinhado ao centro vertical */
+  /* Hambúrguer na terceira coluna */
   .topbar .menu-toggle{
-    align-self: center !important;
+    grid-column: 3 !important;
     justify-self: end !important;
+    align-self: center !important;
     display: flex !important;
     position: static !important;
     z-index: 20 !important;
