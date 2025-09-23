@@ -10,6 +10,7 @@
     align-items: center !important;
     gap: .5rem !important;
     padding: 0 .75rem !important;
+    min-height: 56px !important;
   }
 
   /* Logo na primeira coluna */
@@ -29,15 +30,18 @@
     object-fit: contain !important;
   }
 
-  /* Hambúrguer na terceira coluna */
+  /* Hambúrguer na terceira coluna - centralizado verticalmente */
   .topbar .menu-toggle{
     grid-column: 3 !important;
     justify-self: end !important;
     align-self: center !important;
     display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
     position: static !important;
     z-index: 20 !important;
     padding: .25rem .5rem !important;
+    height: 56px !important;
   }
 
   /* Oculta menu desktop */
