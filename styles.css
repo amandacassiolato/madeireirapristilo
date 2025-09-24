@@ -94,67 +94,56 @@
 /* Menu mobile: logotipo centralizado, ícone à direita, submenu */
 @media (max-width: 780px) {
   :root { --headerH-mobile: 56px; }
-
   .topbar {
     min-height: var(--headerH-mobile) !important;
     background: color-mix(in oklab, white 88%, transparent) !important;
   }
-
   .mainmenu {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 0.8rem 0;
-    gap: 0;
-    min-height: var(--headerH-mobile);
-    background: transparent;
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    position: relative !important;
+    padding: 0.8rem 1rem !important;
+    min-height: var(--headerH-mobile) !important;
+    background: transparent !important;
+    gap: 0 !important;
   }
-
   .brand.center-logo {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    margin: 0 auto;
-    max-width: 120px;
-    max-height: 52px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: static !important;
+    margin: 0 !important;
+    max-width: 120px !important;
+    max-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
-
   .brand.center-logo img {
-    height: 100px !important;
+    height: 56px !important;
     width: auto !important;
-    max-height: 100px !important;
-    object-fit: contain;
+    max-height: 56px !important;
+    object-fit: contain !important;
   }
-
   .main-nav {
-    display: none !important;
+    display: flex !important;
+    gap: 1.2rem !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    font-size: 1.08rem !important;
   }
-
   .menu-toggle {
     display: flex !important;
-    position: absolute;
-    right: 1.2rem;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 3;
-    background: none;
-    border: none;
-    padding: 0.2rem 0.5rem;
-    align-items: center;
-    justify-content: center;
+    position: static !important;
+    background: none !important;
+    border: none !important;
+    padding: 0.2rem 0.5rem !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-left: auto !important;
   }
-
   .menu-toggle svg rect {
     fill: #7c4a1e !important;
   }
-
   .mobile-menu {
     display: none;
     position: absolute;
@@ -171,11 +160,9 @@
     z-index: 10;
     animation: fadeInMenu .25s;
   }
-
   .mobile-menu.open {
     display: flex;
   }
-
   .mobile-menu a {
     font-size: 1.13rem;
     font-weight: 600;
@@ -189,13 +176,11 @@
     border: none;
     transition: background .2s, border-color .2s, color .2s;
   }
-
   .mobile-menu a:hover {
     background: #f1f5f9;
     border-color: #e2e8f0;
     color: #633816 !important;
   }
-
   .mobile-menu a.btn {
     background: #7c4a1e !important;
     color: #fff !important;
@@ -204,7 +189,6 @@
     padding: 0.7rem 1.1rem;
     border: none;
   }
-
   @keyframes fadeInMenu {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: none; }
